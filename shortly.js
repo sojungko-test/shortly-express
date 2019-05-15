@@ -38,8 +38,12 @@ app.get('/links', function(req, res) {
 });
 
 app.get('/login', function (req, res) {
-  res.render('login');
+  res.render('index');
 });
+
+app.get('/signup', function (req, res) {
+  res.render('index');
+})
 
 app.post('/links', function(req, res) {
   var uri = req.body.url;

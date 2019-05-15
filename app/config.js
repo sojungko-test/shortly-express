@@ -42,11 +42,12 @@ db.knex.schema.hasTable('users').then(function (exists) {
       user.increments('id').primary();
       user.string('username', 12);
       user.string('password', 12);
+      user.timestamps();
     }).then(function (table) {
-      console.log('Created Users Table', table)
+      console.log('Created Users Table', table);
     });
   }
-})
+});
 
 /************************************************************/
 // Add additional schema definitions below

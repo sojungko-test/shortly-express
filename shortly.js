@@ -37,6 +37,10 @@ app.get('/links', function(req, res) {
   });
 });
 
+app.get('/login', function (req, res) {
+  res.render('login');
+});
+
 app.post('/links', function(req, res) {
   var uri = req.body.url;
 
